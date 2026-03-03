@@ -3,6 +3,11 @@ import { ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import { bookingPolicyData } from "@/data/shippingPolicyData";
 
+export const metadata = {
+  title: "Booking & Cancellation Policy | Reserviq",
+  description: "Read our booking and cancellation policies to ensure a smooth reservation process.",
+};
+
 export default function BookingPolicy() {
   const { hero, content } = bookingPolicyData;
 

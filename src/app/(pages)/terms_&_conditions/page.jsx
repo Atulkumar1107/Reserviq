@@ -3,6 +3,11 @@ import { ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import { termsData } from "@/data/termsData";
 
+export const metadata = {
+  title: "Terms & Conditions | Reserviq",
+  description: "Review the terms and conditions for using the Reserviq room reservation platform.",
+};
+
 export default function TermsAndConditions() {
   const { hero, content } = termsData;
 

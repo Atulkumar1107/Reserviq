@@ -1,11 +1,10 @@
-"use client";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import OrderSuccessClient from "./OrderSuccessClient";
+
+export const metadata = {
+  title: "Booking Successful | Reserviq",
+  description: "Your room reservation has been successfully placed.",
+};
 
 export default function RedirectToRooms() {
-  const router = useRouter();
-  useEffect(() => {
-    router.replace("/dashboard");
-  }, [router]);
-  return null;
+  return <OrderSuccessClient />;
 }

@@ -110,7 +110,7 @@ export default function ProfileClient() {
                         setActiveTab(tab.id);
                         setMessage({ type: "", content: "" });
                     }}
-                    className={`flex-shrink-0 lg:w-full flex items-center space-x-3 md:space-x-4 px-4 md:px-5 py-3 md:py-4 rounded-xl md:rounded-2xl transition-all font-bold text-sm md:text-base ${
+                    className={`shrink-0 lg:w-full flex items-center space-x-3 md:space-x-4 px-4 md:px-5 py-3 md:py-4 rounded-xl md:rounded-2xl transition-all font-bold text-sm md:text-base ${
                       activeTab === tab.id 
                         ? "bg-[#FAF9F6] text-[#1E293B] shadow-sm ring-1 ring-[#1E293B]/10" 
                         : "text-gray-500 hover:bg-gray-50"
@@ -218,7 +218,7 @@ export default function ProfileClient() {
                                 <p className="font-black text-lg md:text-xl text-gray-900 tracking-tight truncate">{user?.name}</p>
                             </div>
                           </div>
-                          <ChevronRight className="text-gray-300 flex-shrink-0" />
+                          <ChevronRight className="text-gray-300 shrink-0" />
                         </div>
 
                         <div className="flex items-center justify-between p-4 md:p-6 bg-gray-50/50 rounded-2xl border border-gray-50 transition-colors">
@@ -231,7 +231,7 @@ export default function ProfileClient() {
                                 <p className="font-black text-base md:text-xl text-gray-900 tracking-tight truncate">{user?.email}</p>
                             </div>
                           </div>
-                          <ChevronRight className="text-gray-300 flex-shrink-0" />
+                          <ChevronRight className="text-gray-300 shrink-0" />
                         </div>
                       </div>
                     </>

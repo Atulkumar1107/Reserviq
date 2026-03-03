@@ -6,6 +6,11 @@ import {
   contactSidebarData,
 } from "@/data/contactData";
 
+export const metadata = {
+  title: "Contact Us | Get in Touch with Reserviq",
+  description: "Have questions? Contact the Reserviq team for assistance with your room reservations.",
+};
+
 export default function ContactPage() {
   const { section } = contactHeaderData;
 
