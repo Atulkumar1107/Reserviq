@@ -205,23 +205,7 @@ export default function Profile() {
                     </form>
                   ) : (
                     <>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
-                        <div className="p-6 md:p-8 bg-[#FAF9F6] rounded-2xl md:rounded-3xl border border-gray-100 flex flex-col items-center text-center">
-                          <ShoppingBag className="text-[#1E293B] mb-3 md:mb-4 w-6 h-6 md:w-8 md:h-8" size={32} />
-                          <p className="text-2xl md:text-3xl font-black text-gray-900">{orderCount}</p>
-                          <p className="text-[9px] md:text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mt-1 md:mt-2">Total Orders</p>
-                        </div>
-                        <div className="p-6 md:p-8 bg-[#FAF9F6] rounded-2xl md:rounded-3xl border border-gray-100 flex flex-col items-center text-center">
-                          <Calendar className="text-[#1E293B] mb-3 md:mb-4 w-6 h-6 md:w-8 md:h-8" size={32} />
-                          <p className="text-2xl md:text-3xl font-black text-gray-900">12</p>
-                          <p className="text-[9px] md:text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mt-1 md:mt-2">Days Active</p>
-                        </div>
-                        <div className="p-6 md:p-8 bg-[#FAF9F6] rounded-2xl md:rounded-3xl border border-gray-100 flex flex-col items-center text-center sm:col-span-2 lg:col-span-1">
-                          <ShieldCheck className="text-[#1E293B] mb-3 md:mb-4 w-6 h-6 md:w-8 md:h-8" size={32} />
-                          <p className="text-2xl md:text-3xl font-black text-gray-900 italic">Verified</p>
-                          <p className="text-[9px] md:text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mt-1 md:mt-2">Account Status</p>
-                        </div>
-                      </div>
+                    
 
                       <div className="space-y-4 md:space-y-6 pt-4">
                         <div className="flex items-center justify-between p-4 md:p-6 bg-gray-50/50 rounded-2xl border border-gray-50 transition-colors">
