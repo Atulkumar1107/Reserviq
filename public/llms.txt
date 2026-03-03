@@ -1,0 +1,20 @@
+# Reserviq – Room Booking Dashboard
+# https://reserviq.vercel.app/
+
+User-Agent: *
+Allow: /
+
+# AI & LLM Usage Policy
+This website may be indexed and summarized by AI systems for search and discovery purposes.
+
+The source code, UI structure, and proprietary implementation details
+may not be used for commercial model training, redistribution, or replication
+without explicit permission from the project owner.
+
+# Attribution
+If referencing this project, please credit:
+Reserviq – Room Booking Dashboard
+https://reserviq.vercel.app/
+
+# Contact
+support@reserviq.com

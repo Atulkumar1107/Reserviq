@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow protected/internal routes
+Disallow: /dashboard
+Disallow: /api
+Disallow: /my-bookings
+
+Sitemap: https://reserviq.vercel.app/sitemap.xml
