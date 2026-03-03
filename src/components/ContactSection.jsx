@@ -70,11 +70,11 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="bg-[#FAF9F6] min-h-screen flex items-center justify-center p-6">
-      <div className="w-full max-w-6xl flex rounded-[2rem] overflow-hidden bg-white shadow-2xl border border-gray-100">
+    <div className="bg-[#FAF9F6] min-h-screen flex items-center justify-center p-4 lg:p-6">
+      <div className="w-full max-w-6xl flex flex-col lg:flex-row rounded-[2rem] overflow-hidden bg-white shadow-2xl border border-gray-100">
 
         {/* LEFT SIDE - FORM */}
-        <div className="w-3/5 p-10">
+        <div className="w-full lg:w-3/5 p-6 lg:p-10">
           {isSubmitted ? (
             <div className="h-full flex flex-col items-center justify-center text-center space-y-4">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
@@ -171,7 +171,7 @@ const ContactSection = () => {
         </div>
 
         {/* RIGHT SIDE - IMAGE + INFO */}
-        <div className="w-2/5 bg-gradient-to-br from-[#F1F5F9] to-[#E2E8F0] p-10 flex flex-col justify-center border-l border-gray-100">
+        <div className="w-full lg:w-2/5 bg-gradient-to-br from-[#F1F5F9] to-[#E2E8F0] p-6 lg:p-10 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-gray-100">
           <div className="space-y-6">
 
             <img

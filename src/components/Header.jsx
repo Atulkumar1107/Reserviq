@@ -83,7 +83,7 @@ const Header = ({ forceDark = false }) => {
         <div className="max-w-7xl mx-auto w-full">
           {isMinimal ? (
             /* Minimal Mode */
-            <div className="grid grid-cols-3 items-center w-full">
+<div className="grid grid-cols-[0.5fr_3fr_0.5fr] items-center w-full">
               {/* Left: Hamburger */}
               <div className="flex justify-start">
                 <button
@@ -100,7 +100,7 @@ const Header = ({ forceDark = false }) => {
                   <img
                     src="https://res.cloudinary.com/dwau5poqz/image/upload/v1772550564/ChatGPT_Image_Mar_3_2026_08_39_07_PM_avt0ef.png"
                     alt="Glow Luxe Logo"
-                    className="h-[220px] w-auto object-contain transition-all duration-500"
+className="w-full h-auto max-h-[260px] object-contain transition-all duration-500 mt-4 md:mt-0 md:ml-0 ml-4"
                   />
                 </Link>
               </div>
