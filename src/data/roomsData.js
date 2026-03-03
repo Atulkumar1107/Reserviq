@@ -1,0 +1,268 @@
+// Mock rooms data — styled to match Glow Luxe botanical aesthetic
+export const rooms = [
+  {
+    id: 1,
+    name: "Lavender Haven Suite",
+    type: "Suite",
+    price: 4999,
+    capacity: 2,
+    size: "550 sq ft",
+    floor: 5,
+    rating: 4.9,
+    reviews: 128,
+    description:
+      "Immerse yourself in the soothing essence of lavender in our most coveted suite. Floor-to-ceiling windows reveal sweeping garden vistas while handcrafted botanical décor creates an atmosphere of pure tranquility.",
+    image:
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772553779/pexels-pixabay-271754_k99zpv.jpg",
+    gallery: [
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772553886/pexels-ansar-muhammad-380085065-27604138_cbgubo.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772553888/pexels-the-ghazi-2152398165-32177960_kzah8k.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772553891/pexels-aliaksei-lepik-557018408-18759317_m6oege.jpg",
+    ],
+    amenities: [
+      "King Bed",
+      "Jacuzzi",
+      "Garden View",
+      "Mini Bar",
+      "Room Service",
+      "Free WiFi",
+      "Air Conditioning",
+      "Smart TV",
+    ],
+    available: true,
+    bookedDates: [
+      { start: "2026-03-10", end: "2026-03-13" },
+      { start: "2026-03-20", end: "2026-03-22" },
+    ],
+  },
+  {
+    id: 2,
+    name: "Rose Petal Deluxe",
+    type: "Deluxe",
+    price: 3499,
+    capacity: 2,
+    size: "420 sq ft",
+    floor: 4,
+    rating: 4.7,
+    reviews: 95,
+    description:
+      "Draped in warm rose hues and adorned with hand-pressed floral artwork, this deluxe room is a sanctuary of elegance. Wake up to the scent of fresh roses and unwind in plush botanical-inspired surroundings.",
+    image:
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554112/pexels-cottonbro-6466285_hbbr2p.jpg",
+    gallery: [
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554084/pexels-cottonbro-6466484_qtogou.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554157/pexels-cottonbro-6466288_p32dxu.jpg",
+    ],
+    amenities: [
+      "Queen Bed",
+      "Bathtub",
+      "City View",
+      "Free WiFi",
+      "Air Conditioning",
+      "Smart TV",
+      "Minibar",
+    ],
+    available: true,
+    bookedDates: [{ start: "2026-03-08", end: "2026-03-10" }],
+  },
+  {
+    id: 3,
+    name: "Jasmine Bloom Double",
+    type: "Double",
+    price: 2499,
+    capacity: 2,
+    size: "320 sq ft",
+    floor: 3,
+    rating: 4.5,
+    reviews: 212,
+    description:
+      "A charming double room infused with the delicate fragrance of jasmine. Perfect for couples seeking a cozy retreat with all modern comforts nestled in a botanically inspired setting.",
+    image:
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554277/pexels-asphotography-97083_str3j0.jpg",
+    gallery: [
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554299/pexels-mographe-34769636_sbp5tj.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554338/pexels-enginakyurt-2952663_zhowdy.jpg",
+    ],
+    amenities: [
+      "Double Bed",
+      "Shower",
+      "Garden View",
+      "Free WiFi",
+      "Air Conditioning",
+      "TV",
+    ],
+    available: true,
+    bookedDates: [],
+  },
+  {
+    id: 4,
+    name: "Sage Serenity Single",
+    type: "Single",
+    price: 1499,
+    capacity: 1,
+    size: "200 sq ft",
+    floor: 2,
+    rating: 4.3,
+    reviews: 180,
+    description:
+      "A thoughtfully designed single room enveloped in calming sage tones. Ideal for solo travellers seeking mindful rest. Clean lines, earthy textures, and curated botanical accents create a restorative haven.",
+    image:
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554482/pexels-pixabay-276528_hk7vqr.jpg",
+    gallery: [
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554480/pexels-pixabay-279719_e5usyv.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554478/pexels-pixabay-276583_raga3r.jpg"
+    ],
+    amenities: [
+      "Single Bed",
+      "Shower",
+      "Street View",
+      "Free WiFi",
+      "Air Conditioning",
+      "TV",
+      "Work Desk",
+    ],
+    available: true,
+    bookedDates: [{ start: "2026-03-15", end: "2026-03-17" }],
+  },
+  {
+    id: 5,
+    name: "Orchid Prestige Suite",
+    type: "Suite",
+    price: 6999,
+    capacity: 4,
+    size: "780 sq ft",
+    floor: 7,
+    rating: 5.0,
+    reviews: 64,
+    description:
+      "Our crown jewel — the Orchid Prestige Suite is an extraordinary living experience. Featuring a private terrace with panoramic views, a separate lounge, and a luxury spa bathroom adorned with rare orchid motifs.",
+    image:
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772552990/pexels-quang-nguyen-vinh-222549-29000012_ygcmgz.jpg",
+    gallery: [
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772553433/pexels-artbovich-6970068_qslgcd.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772553509/pexels-artbovich-7587742_ya4kt9.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772553433/pexels-artbovich-6970068_qslgcd.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772552990/pexels-quang-nguyen-vinh-222549-29000012_ygcmgz.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772553433/pexels-artbovich-6970068_qslgcd.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772553509/pexels-artbovich-7587742_ya4kt9.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772552990/pexels-quang-nguyen-vinh-222549-29000012_ygcmgz.jpg",
+    ],
+    amenities: [
+      "King Bed",
+      "Private Terrace",
+      "Panoramic View",
+      "Spa Bathroom",
+      "Jacuzzi",
+      "Butler Service",
+      "Free WiFi",
+      "Smart Home",
+      "Kitchenette",
+    ],
+    available: true,
+    bookedDates: [{ start: "2026-03-25", end: "2026-03-30" }],
+  },
+  {
+    id: 6,
+    name: "Chamomile Calm Double",
+    type: "Double",
+    price: 2799,
+    capacity: 2,
+    size: "350 sq ft",
+    floor: 3,
+    rating: 4.6,
+    reviews: 143,
+    description:
+      "Named after the gentle chamomile flower, this double room exudes quiet comfort. Warm amber lighting, botanical prints, and the softest Egyptian cotton linens promise a restful, restorative stay.",
+    image:
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554683/pexels-artbovich-6588581_pdb57d.jpg",
+    gallery: [
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554669/pexels-thiha-soe-2746200-5883725_jvtfyn.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554670/pexels-the-7-hotel-lisbon-1817831-18201945_foirsd.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554669/pexels-artbovich-7031711_dv9gmo.jpg",
+    ],
+    amenities: [
+      "Queen Bed",
+      "Bathtub",
+      "City View",
+      "Free WiFi",
+      "Air Conditioning",
+      "Smart TV",
+      "Coffee Machine",
+    ],
+    available: true,
+    bookedDates: [],
+  },
+  {
+    id: 7,
+    name: "Eucalyptus Escape Deluxe",
+    type: "Deluxe",
+    price: 3899,
+    capacity: 3,
+    size: "480 sq ft",
+    floor: 6,
+    rating: 4.8,
+    reviews: 87,
+    description:
+      "Breathe deeply. The Eucalyptus Escape Deluxe infuses crisp, refreshing eucalyptus aromas into every corner. A spacious retreat featuring a walk-in wardrobe and a luxurious rainfall shower.",
+    image:
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554914/pexels-cottonbro-7222183_mv3ek6.jpg",
+    gallery: [
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554919/pexels-artbovich-6957108_vpzhym.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554897/pexels-pavel-danilyuk-6667425_jmpzi8.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772554938/pexels-ansar-muhammad-380085065-23916836_edjqe7.jpg"
+    ],
+    amenities: [
+      "King Bed",
+      "Rainfall Shower",
+      "Walk-in Wardrobe",
+      "Balcony",
+      "Free WiFi",
+      "Smart TV",
+      "Air Conditioning",
+      "Minibar",
+    ],
+    available: true,
+    bookedDates: [{ start: "2026-03-12", end: "2026-03-14" }],
+  },
+  {
+    id: 8,
+    name: "Lotus Tranquil Single",
+    type: "Single",
+    price: 1799,
+    capacity: 1,
+    size: "230 sq ft",
+    floor: 2,
+    rating: 4.4,
+    reviews: 201,
+    description:
+      "Inspired by the serene lotus flower, this thoughtfully designed single room provides everything a mindful traveller needs — a comfortable bed, a calming palette, and a peaceful ambience.",
+    image:
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772555526/pexels-cottonbro-4626357_vrnuvk.jpg",
+    gallery: [
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772555527/pexels-olly-3940733_lnr2kw.jpg",
+      "https://res.cloudinary.com/dwau5poqz/image/upload/v1772555593/pexels-katebranch-8725602_uucovy.jpg"
+    ],
+    amenities: [
+      "Single Bed",
+      "Shower",
+      "Garden View",
+      "Free WiFi",
+      "Air Conditioning",
+      "TV",
+      "Work Desk",
+      "Safe",
+    ],
+    available: true,
+    bookedDates: [],
+  },
+];
+
+export const roomTypes = ["All", "Single", "Double", "Deluxe", "Suite"];
+
+export const priceRanges = [
+  { label: "All Prices", min: 0, max: Infinity },
+  { label: "Under ₹2,000", min: 0, max: 2000 },
+  { label: "₹2,000 – ₹3,500", min: 2000, max: 3500 },
+  { label: "₹3,500 – ₹5,000", min: 3500, max: 5000 },
+  { label: "Above ₹5,000", min: 5000, max: Infinity },
+];
