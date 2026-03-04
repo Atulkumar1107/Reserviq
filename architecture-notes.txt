@@ -36,3 +36,23 @@ Using 'localStorage' as a mock database allows for persistent user sessions and 
 
 ● Modular Component Architecture
 UI components are strictly separated from business logic. This modularity ensures that the design system (theme, typography, styles) can be updated independently of the application's functional requirements, allowing for rapid iteration and high code reusability.
+
+---
+
+### 3. SEO, Crawling & AI Indexing Files
+
+To improve discoverability, indexing, and documentation clarity, a few additional web standard files were included in the project.
+
+● sitemap.xml  
+The sitemap.xml file provides a structured list of all important pages in the application. Search engines like Google use this file to efficiently crawl and index the website. This helps search engines understand the structure of the application and ensures important routes are discoverable.
+
+● robots.txt  
+The robots.txt file defines rules for search engine crawlers. It tells bots which parts of the website are allowed to be crawled and indexed. In this project, it also references the sitemap.xml to guide search engines toward the correct pages.
+
+● glossary.html  
+The glossary.html page documents key terms and concepts used throughout the application (such as booking flow, authentication logic, and dashboard features). This helps both users and developers quickly understand domain-specific terminology used within the platform.
+
+● llms.txt  
+The llms.txt file is designed for Large Language Models and AI crawlers. It provides structured information about the application so AI systems can better understand the project, its purpose, and its architecture. This improves AI discoverability and helps ensure accurate summarization of the project.
+
+These files demonstrate consideration for modern web standards, search engine optimization, and emerging AI indexing practices.
