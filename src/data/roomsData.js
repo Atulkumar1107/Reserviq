@@ -1,4 +1,3 @@
-// Mock rooms data — styled to match Glow Luxe botanical aesthetic
 export const rooms = [
   {
     id: 1,

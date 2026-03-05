@@ -22,7 +22,6 @@ export default function MyBookingsClient() {
   const [cancellingId, setCancellingId] = useState(null);
   const [confirmCancel, setConfirmCancel] = useState(null);
 
-  // Load bookings
   useEffect(() => {
     setBookings(getBookings());
   }, [user]);
@@ -34,7 +33,6 @@ export default function MyBookingsClient() {
   const handleConfirmCancel = useCallback(() => {
     if (!confirmCancel) return;
     setCancellingId(confirmCancel);
-    // Simulate async cancel
     setTimeout(() => {
       cancelBooking(confirmCancel);
       setBookings(getBookings());
@@ -70,7 +68,6 @@ export default function MyBookingsClient() {
     },
   };
 
-  // Sort by date: newest first
   const sortedBookings = useMemo(
     () => [...bookings].sort((a, b) => new Date(b.bookedAt) - new Date(a.bookedAt)),
     [bookings]
@@ -79,7 +76,6 @@ export default function MyBookingsClient() {
   return (
     <div className="min-h-screen bg-[#FAF9F6] pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -94,7 +90,6 @@ export default function MyBookingsClient() {
           </p>
         </motion.div>
 
-        {/* Booking List */}
         {sortedBookings.length === 0 ? (
           <EmptyState
             icon={BedDouble}
@@ -127,7 +122,6 @@ export default function MyBookingsClient() {
                     }`}
                   >
                     <div className="flex flex-col sm:flex-row">
-                      {/* Room image */}
                       <div className="sm:w-40 h-40 sm:h-auto shrink-0 overflow-hidden">
                         <img
                           src={booking.roomImage}
@@ -136,7 +130,6 @@ export default function MyBookingsClient() {
                         />
                       </div>
 
-                      {/* Details */}
                       <div className="flex-1 p-5 flex flex-col gap-2">
                         <div className="flex items-start justify-between gap-3 flex-wrap">
                           <div>
@@ -174,7 +167,6 @@ export default function MyBookingsClient() {
                           #{booking.id}
                         </p>
 
-                        {/* Actions */}
                         {!isCancelled && (
                           <div className="flex items-center gap-3 mt-auto pt-2">
                             {confirmCancel === booking.id ? (
@@ -234,7 +226,6 @@ export default function MyBookingsClient() {
           </div>
         )}
 
-        {/* Back link */}
         <div className="mt-8 text-center">
           <Link href="/dashboard">
             <Button variant="secondary" icon={BedDouble}>

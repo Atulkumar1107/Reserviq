@@ -54,19 +54,19 @@ const ResourceCenter = () => {
           <div className="grid grid-cols-2 gap-4 max-w-3xl">
             <img
               src={images[0].url}
-              alt="GlowLuxe Resource 1"
+              alt="Reserviq 1"
               className="rounded-2xl object-cover w-full h-80 shadow-lg"
             />
 
             <img
               src={images[1].url}
-              alt="GlowLuxe Resource 2"
+              alt="Reserviq 2"
               className="rounded-2xl object-cover w-full h-72 mt-4 shadow-lg"
             />
 
             <img
               src={images[2].url}
-              alt="GlowLuxe Resource 3"
+              alt="Reserviq 3"
               className="rounded-2xl object-cover w-full h-56 col-span-2 mt-4 shadow-lg"
             />
           </div>

@@ -20,14 +20,14 @@ const RoomGrid = memo(function RoomGrid({ rooms }) {
           transition={{ delay: i * 0.08 }}
           className="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:shadow-slate-900/10 hover:-translate-y-1 transition-all duration-300 group flex flex-col"
         >
-          {/* Image */}
+       
           <div className="relative rounded-xl md:rounded-2xl overflow-hidden mb-4 md:mb-5">
             <img
               src={room.image}
               alt={room.name}
               className="h-36 md:h-52 w-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            {/* Price tag */}
+          
             <div className="absolute top-2 right-2 bg-white/95 backdrop-blur rounded-lg px-2.5 py-1 shadow">
               <span className="text-[#1E293B] font-bold text-sm">
                 ₹{room.price.toLocaleString()}
@@ -39,7 +39,6 @@ const RoomGrid = memo(function RoomGrid({ rooms }) {
             </div>
           </div>
 
-          {/* Info */}
           <div className="flex items-start justify-between gap-2 mb-1">
             <h3 className="text-sm md:text-lg font-bold text-gray-900 leading-snug line-clamp-2">
               {room.name}
@@ -83,7 +82,6 @@ const BotanicalCollection = () => {
     fetchRooms();
   }, []);
 
-  // Sync activeImage with featuredRoom
   const featuredRoom = rooms.length > 0
     ? [...rooms].sort((a, b) => b.rating - a.rating)[0]
     : null;
@@ -108,7 +106,6 @@ const BotanicalCollection = () => {
           </div>
         ) : (
           <>
-            {/* FEATURED ROOM */}
             {featuredRoom && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -117,7 +114,6 @@ const BotanicalCollection = () => {
                 className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden mb-24"
               >
                 <div className="grid md:grid-cols-2 gap-12 p-8 lg:p-16">
-                  {/* Left — Image */}
                   <div className="flex flex-col">
                     <div className="relative rounded-2xl overflow-hidden mb-4 h-[380px] bg-gray-100">
                       <AnimatePresence mode="wait">
@@ -136,10 +132,8 @@ const BotanicalCollection = () => {
                         <Badge variant={featuredRoom.type}>{featuredRoom.type}</Badge>
                       </div>
                     </div>
-                    {/* Gallery thumbs */}
                     {featuredRoom.gallery?.length > 0 && (
                       <div className="grid grid-cols-4 gap-3">
-                        {/* Include the main image in the gallery as well */}
                         {[featuredRoom.image, ...featuredRoom.gallery.filter(img => img !== featuredRoom.image)].map((src, i) => (
                           <button
                             key={i}
@@ -157,7 +151,6 @@ const BotanicalCollection = () => {
                     )}
                   </div>
 
-                  {/* Right — Details */}
                   <div className="flex flex-col justify-center">
                     <div className="flex items-center gap-2 mb-3">
                       <Star className="h-5 w-5 fill-amber-400 text-amber-400" />
@@ -203,7 +196,6 @@ const BotanicalCollection = () => {
               </motion.div>
             )}
 
-            {/* RECOMMENDED ROOMS */}
             <div>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
                 <h2 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight uppercase">

@@ -42,7 +42,6 @@ export default function ProfileClient() {
         lastName: user.lastName,
         email: user.email
       });
-      // Just keep a count for the dashboard stat
       const userOrders = getOrders();
       setOrderCount(userOrders ? userOrders.length : 0);
     }
@@ -89,7 +88,6 @@ export default function ProfileClient() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 mt-6 md:mt-10">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           
-          {/* Sidebar / Mobile Tabs */}
           <div className="w-full lg:w-1/4">
             <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="p-6 md:p-8 bg-[#1E293B] text-white text-center">

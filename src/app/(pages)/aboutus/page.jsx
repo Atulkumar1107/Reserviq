@@ -15,7 +15,6 @@ export default function AboutUs() {
 
   return (
     <div className="relative w-full min-h-[500px] overflow-hidden">
-      {/* Background Video */}
       <div className="absolute h-[500px] inset-0">
         <video
           autoPlay
@@ -29,7 +28,6 @@ export default function AboutUs() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
       </div>
 
-      {/* Hero Content */}
       <div className="relative min-h-[500px] flex flex-col items-center justify-center text-center px-4">
         <h1 className="text-6xl md:text-7xl font-serif text-white mb-6 tracking-wider">
           {aboutData.title}
@@ -47,7 +45,6 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* Mission Section */}
       <div className="relative bg-[#FAF9F6] py-16 px-4">
         <div className="max-w-4xl -mb-8 mx-auto text-center">
           <h2 className="text-3xl md:text-5xl text-[#1E293B] font-black font-serif mb-8 uppercase tracking-tight">
@@ -59,7 +56,6 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* Cards Section */}
       <div className="relative bg-[#FAF9F6] py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -85,7 +81,6 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* Product Section */}
       <div className="relative bg-[#FAF9F6] py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl text-[#1E293B] font-black font-serif mb-8 uppercase tracking-tight">

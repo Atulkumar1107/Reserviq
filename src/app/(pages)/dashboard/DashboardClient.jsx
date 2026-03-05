@@ -46,7 +46,6 @@ export default function DashboardClient() {
   return (
     <div className="min-h-screen bg-[#FAF9F6] pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Hero Welcome */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -64,7 +63,6 @@ export default function DashboardClient() {
           </p>
         </motion.div>
 
-        {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
           {stats.map((stat, i) => (
             <motion.div
@@ -85,7 +83,6 @@ export default function DashboardClient() {
           ))}
         </div>
 
-        {/* Section Title + Filters */}
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Available Rooms
@@ -93,7 +90,6 @@ export default function DashboardClient() {
           <RoomFilters />
         </div>
 
-        {/* Room Grid */}
         {roomsLoading ? (
           <div className="flex justify-center py-24">
             <Spinner size="lg" />

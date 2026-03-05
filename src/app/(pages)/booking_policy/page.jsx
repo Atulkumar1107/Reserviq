@@ -13,7 +13,6 @@ export default function BookingPolicy() {
 
   return (
     <div className="min-h-screen bg-[#FAF9F6] pt-[100px]">
-      {/* Hero Section */}
       <div className="relative h-96 flex items-center justify-center text-white">
         
         <div
@@ -54,7 +53,6 @@ export default function BookingPolicy() {
         </div>
       </div>
 
-      {/* Content Section */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="prose max-w-none">
 

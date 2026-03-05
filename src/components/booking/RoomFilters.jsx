@@ -54,7 +54,6 @@ export default function RoomFilters() {
     <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-4 flex flex-wrap gap-4 items-center">
       <SlidersHorizontal className="h-5 w-5 text-[#1E293B] shrink-0" />
 
-      {/* Room Type */}
       <div className="flex flex-wrap gap-2">
         {roomTypes.map((type) => (
           <button
@@ -71,7 +70,6 @@ export default function RoomFilters() {
         ))}
       </div>
 
-      {/* Price Range */}
       <div className="flex items-center gap-2">
         <label className="text-sm text-gray-500 whitespace-nowrap">Price:</label>
         <select
@@ -88,7 +86,6 @@ export default function RoomFilters() {
         </select>
       </div>
 
-      {/* Capacity */}
       <div className="flex items-center gap-2">
         <label className="text-sm text-gray-500 whitespace-nowrap">Guests:</label>
         <select
@@ -106,7 +103,6 @@ export default function RoomFilters() {
         </select>
       </div>
 
-      {/* Reset */}
       {isFiltered && (
         <Button
           variant="ghost"

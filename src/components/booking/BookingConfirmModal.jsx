@@ -34,7 +34,7 @@ export default function BookingConfirmModal({ isOpen, onClose, onConfirm }) {
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Confirm Your Booking">
-      {/* Room preview */}
+ 
       <div className="flex gap-4 items-center mb-6 p-4 bg-slate-50 rounded-2xl">
         <img
           src={selectedRoom.image}
@@ -49,7 +49,7 @@ export default function BookingConfirmModal({ isOpen, onClose, onConfirm }) {
         </div>
       </div>
 
-      {/* Details */}
+ 
       <div className="space-y-3 mb-6">
         <div className="flex items-center gap-3 text-sm text-gray-700">
           <CalendarDays className="h-4 w-4 text-[#1E293B]" />
@@ -71,7 +71,7 @@ export default function BookingConfirmModal({ isOpen, onClose, onConfirm }) {
         </div>
       </div>
 
-      {/* Price breakdown */}
+    
       <div className="border-t border-gray-100 pt-4 mb-6 space-y-2">
         <div className="flex justify-between text-sm text-gray-600">
           <span>
@@ -85,7 +85,6 @@ export default function BookingConfirmModal({ isOpen, onClose, onConfirm }) {
         </div>
       </div>
 
-      {/* Actions */}
       <div className="flex gap-3">
         <Button variant="secondary" className="flex-1" onClick={onClose}>
           Cancel

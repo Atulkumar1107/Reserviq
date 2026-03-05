@@ -9,7 +9,6 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  // 🔹 Load logged in user
   useEffect(() => {
     if (typeof window !== "undefined") {
       const storedUser = localStorage.getItem("mockCurrentUser");
@@ -20,7 +19,7 @@ export function AuthProvider({ children }) {
     }
   }, []);
 
-  // 🔥 REGISTER
+
   const register = async ({
     username,
     email,
@@ -42,7 +41,7 @@ export function AuthProvider({ children }) {
         id: Date.now(),
         username,
         email,
-        password, // ⚠️ Mock only
+        password, 
         firstName,
         lastName,
         name: `${firstName} ${lastName}`,
@@ -60,7 +59,6 @@ export function AuthProvider({ children }) {
     }
   };
 
-  // 🔥 LOGIN
   const login = async ({ email, password }) => {
     try {
       const users = JSON.parse(localStorage.getItem("mockUsers")) || [];
@@ -79,14 +77,13 @@ export function AuthProvider({ children }) {
     }
   };
 
-  // 🔥 LOGOUT
   const logout = () => {
     localStorage.removeItem("mockCurrentUser");
     setUser(null);
     router.push("/");
   };
 
-  // 🔥 UPDATE PROFILE
+
   const updateProfile = async (updatedData) => {
     try {
       const users = JSON.parse(localStorage.getItem("mockUsers")) || [];
@@ -102,7 +99,7 @@ export function AuthProvider({ children }) {
     }
   };
 
-  // 🔥 UPDATE PASSWORD
+
   const updatePassword = async (currentPassword, newPassword) => {
     try {
       if (user.password !== currentPassword) {
@@ -121,7 +118,6 @@ export function AuthProvider({ children }) {
     }
   };
 
-  // 🏨 ADD BOOKING
   const addBooking = (booking) => {
     try {
       if (!user) return null;
@@ -135,7 +131,6 @@ export function AuthProvider({ children }) {
     }
   };
 
-  // 🏨 GET BOOKINGS
   const getBookings = () => {
     try {
       if (!user) return [];
@@ -147,7 +142,7 @@ export function AuthProvider({ children }) {
     }
   };
 
-  // 🏨 CANCEL BOOKING
+
   const cancelBooking = (bookingId) => {
     try {
       const bookings = JSON.parse(localStorage.getItem("mockBookings")) || [];

@@ -1,6 +1,5 @@
 import { rooms } from "@/data/roomsData";
 
-// Simulates async API delay
 const delay = (ms = 400) => new Promise((res) => setTimeout(res, ms));
 
 /**

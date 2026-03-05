@@ -11,29 +11,24 @@ const RoomCard = memo(function RoomCard({ room }) {
 
   return (
     <Card hover className="overflow-hidden flex flex-col">
-      {/* Image */}
       <div className="relative h-52 overflow-hidden">
         <img
           src={room.image}
           alt={room.name}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        {/* Price tag */}
         <div className="absolute top-3 right-3 bg-white/95 backdrop-blur rounded-xl px-3 py-1.5 shadow-md">
           <span className="text-[#1E293B] font-bold text-base">
             ₹{room.price.toLocaleString()}
           </span>
           <span className="text-gray-400 text-xs">/night</span>
         </div>
-        {/* Type badge */}
         <div className="absolute top-3 left-3">
           <Badge variant={room.type}>{room.type}</Badge>
         </div>
       </div>
 
-      {/* Body */}
       <div className="p-5 flex flex-col flex-1 gap-3">
-        {/* Name & rating */}
         <div className="flex items-start justify-between gap-2">
           <h3 className="font-bold text-gray-900 text-base leading-snug line-clamp-2">
             {room.name}
@@ -46,7 +41,6 @@ const RoomCard = memo(function RoomCard({ room }) {
           </div>
         </div>
 
-        {/* Meta */}
         <div className="flex items-center gap-4 text-gray-500 text-xs">
           <span className="flex items-center gap-1">
             <Users className="h-3.5 w-3.5" /> {room.capacity} guests
@@ -56,10 +50,8 @@ const RoomCard = memo(function RoomCard({ room }) {
           </span>
         </div>
 
-        {/* Description */}
         <p className="text-gray-500 text-sm line-clamp-2">{room.description}</p>
 
-        {/* Amenities */}
         <div className="flex flex-wrap gap-1.5 mt-auto">
           {room.amenities.slice(0, 4).map((a) => (
             <span
@@ -77,7 +69,6 @@ const RoomCard = memo(function RoomCard({ room }) {
           )}
         </div>
 
-        {/* CTA */}
         <Link href={`/dashboard/rooms/${room.id}`} className="mt-2 block">
           <Button variant="primary" className="w-full">
             View &amp; Book

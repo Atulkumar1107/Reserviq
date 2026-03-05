@@ -20,7 +20,7 @@ export const metadata = {
     "Book rooms effortlessly with Reserviq. A modern room booking dashboard featuring secure authentication, availability validation, and streamlined reservation management.",
 };
 
-// ✅ Static frontend data
+
 const headerData = {
   navbars: [
     { title: "Home", link: "/" },

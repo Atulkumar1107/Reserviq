@@ -15,7 +15,6 @@ const DateRangePicker = memo(function DateRangePicker({ onDatesValid }) {
       setDateRange((prev) => ({
         ...prev,
         startDate: val,
-        // Reset end if before new start
         endDate: prev.endDate && prev.endDate <= val ? "" : prev.endDate,
       }));
     },
@@ -50,7 +49,6 @@ const DateRangePicker = memo(function DateRangePicker({ onDatesValid }) {
       </h3>
 
       <div className="grid grid-cols-2 gap-3">
-        {/* Check-in */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Check-in
@@ -65,7 +63,6 @@ const DateRangePicker = memo(function DateRangePicker({ onDatesValid }) {
           />
         </div>
 
-        {/* Check-out */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Check-out
@@ -82,7 +79,6 @@ const DateRangePicker = memo(function DateRangePicker({ onDatesValid }) {
         </div>
       </div>
 
-      {/* Nights counter */}
       {nights > 0 && (
         <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 text-[#1E293B]">
           <CalendarDays className="h-4 w-4" />
@@ -92,7 +88,6 @@ const DateRangePicker = memo(function DateRangePicker({ onDatesValid }) {
         </div>
       )}
 
-      {/* Validation message */}
       {startDate && endDate && endDate <= startDate && (
         <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-red-50 text-red-600 text-sm">
           <AlertCircle className="h-4 w-4 shrink-0" />

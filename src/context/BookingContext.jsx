@@ -16,24 +16,20 @@ import {
 const BookingContext = createContext();
 
 export function BookingProvider({ children }) {
-  // ── Room listing state ──────────────────────────────────
+
   const [rooms, setRooms] = useState([]);
   const [roomsLoading, setRoomsLoading] = useState(false);
   const [roomsError, setRoomsError] = useState(null);
 
-  // ── Active filters ───────────────────────────────────────
   const [filters, setFilters] = useState({
     type: "All",
     maxPrice: null,
     minCapacity: null,
   });
 
-  // ── Room detail state ────────────────────────────────────
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [roomDetailLoading, setRoomDetailLoading] = useState(false);
   const [roomDetailError, setRoomDetailError] = useState(null);
-
-  // ── Booking flow state ───────────────────────────────────
   const [dateRange, setDateRange] = useState({ startDate: "", endDate: "" });
   const [guests, setGuests] = useState(1);
   const [availability, setAvailability] = useState(null); // { available, message }
@@ -41,7 +37,6 @@ export function BookingProvider({ children }) {
   const [bookingLoading, setBookingLoading] = useState(false);
   const [lastBooking, setLastBooking] = useState(null);
 
-  // ── Fetch room listing ───────────────────────────────────
   const fetchRooms = useCallback(async (overrideFilters = {}) => {
     setRoomsLoading(true);
     setRoomsError(null);
@@ -56,13 +51,13 @@ export function BookingProvider({ children }) {
     }
   }, [filters]);
 
-  // ── Update filters ────────────────────────────────────────
+
   const updateFilters = useCallback((newFilters) => {
     setFilters((prev) => ({ ...prev, ...newFilters }));
     setAvailability(null);
   }, []);
 
-  // ── Fetch room detail ─────────────────────────────────────
+
   const fetchRoomDetail = useCallback(async (id) => {
     setRoomDetailLoading(true);
     setRoomDetailError(null);
@@ -77,7 +72,7 @@ export function BookingProvider({ children }) {
     }
   }, []);
 
-  // ── Check availability ────────────────────────────────────
+
   const checkRoomAvailability = useCallback(async () => {
     if (!selectedRoom || !dateRange.startDate || !dateRange.endDate) return;
     setAvailabilityLoading(true);
@@ -96,7 +91,6 @@ export function BookingProvider({ children }) {
     }
   }, [selectedRoom, dateRange]);
 
-  // ── Confirm booking ───────────────────────────────────────
   const confirmBooking = useCallback(
     async (userId) => {
       if (!selectedRoom || !dateRange.startDate || !dateRange.endDate) return null;
@@ -127,7 +121,6 @@ export function BookingProvider({ children }) {
     [selectedRoom, dateRange, guests]
   );
 
-  // ── Reset booking flow ────────────────────────────────────
   const resetBookingFlow = useCallback(() => {
     setDateRange({ startDate: "", endDate: "" });
     setGuests(1);

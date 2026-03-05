@@ -99,7 +99,7 @@ const Header = ({ forceDark = false }) => {
                 <Link href="/" className={navLinkClass}>
                   <img
                     src="https://res.cloudinary.com/dwau5poqz/image/upload/v1772550564/ChatGPT_Image_Mar_3_2026_08_39_07_PM_avt0ef.png"
-                    alt="Glow Luxe Logo"
+                    alt="Reserviq Logo"
 className="w-full h-auto max-h-[260px] object-contain transition-all duration-500 mt-4 md:mt-0 md:ml-0 ml-4"
                   />
                 </Link>
@@ -125,7 +125,7 @@ className="w-full h-auto max-h-[260px] object-contain transition-all duration-50
               <Link href="/" className={`${navLinkClass} flex-shrink-0`}>
                 <img
                   src="https://res.cloudinary.com/dwau5poqz/image/upload/v1772550564/ChatGPT_Image_Mar_3_2026_08_39_07_PM_avt0ef.png"
-                  alt="Glow Luxe Logo"
+                  alt="Reserviq Logo"
                   className="h-52 -ml-10 mt-3 w-auto object-contain transition-all duration-300"
                 />
               </Link>
@@ -304,7 +304,7 @@ className="w-full h-auto max-h-[260px] object-contain transition-all duration-50
           <div className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-white shadow-2xl flex flex-col">
             <div className="p-6 flex items-center justify-between border-b border-gray-100 bg-[#FAF9F6]">
               <span className="text-2xl font-black text-[#1E293B] tracking-tighter">
-                GLOW LUXE
+                ReservIQ
               </span>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}

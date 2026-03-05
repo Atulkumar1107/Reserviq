@@ -55,19 +55,16 @@ function RoomDetailContent() {
     }
   }, [id]);
 
-  // Sync activeImage with selectedRoom when loaded
   useEffect(() => {
     if (selectedRoom) {
       setActiveImage(selectedRoom.image);
     }
   }, [selectedRoom]);
 
-  // Trigger availability check when dates are valid
   const handleDatesValid = useCallback(() => {
     checkRoomAvailability();
   }, [checkRoomAvailability]);
 
-  // Auto-check when dateRange changes and both dates set
   useEffect(() => {
     if (dateRange.startDate && dateRange.endDate && dateRange.endDate > dateRange.startDate) {
       const t = setTimeout(() => checkRoomAvailability(), 300);
@@ -122,7 +119,6 @@ function RoomDetailContent() {
   return (
     <div className="min-h-screen bg-[#FAF9F6] pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        {/* Back */}
         <Link
           href="/dashboard"
           className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#1E293B] transition-colors mb-6"
@@ -130,7 +126,6 @@ function RoomDetailContent() {
           <ArrowLeft className="h-4 w-4" /> Back to Rooms
         </Link>
 
-        {/* Success Banner */}
         <AnimatePresence>
           {showSuccess && lastBooking && (
             <motion.div
@@ -158,9 +153,7 @@ function RoomDetailContent() {
         </AnimatePresence>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left — Room Info */}
           <div className="lg:col-span-2 space-y-6">
-            {/* Hero image */}
             <div className="relative h-72 sm:h-96 rounded-3xl overflow-hidden shadow-xl bg-gray-100">
               <AnimatePresence mode="wait">
                 <motion.img
@@ -179,10 +172,8 @@ function RoomDetailContent() {
               </div>
             </div>
 
-            {/* Gallery */}
             {selectedRoom.gallery?.length > 0 && (
               <div className="grid grid-cols-4 sm:grid-cols-5 gap-3">
-                {/* Include the main image in the gallery as well */}
                 {[selectedRoom.image, ...selectedRoom.gallery.filter(img => img !== selectedRoom.image)].map((src, i) => (
                   <button
                     key={i}
@@ -203,7 +194,6 @@ function RoomDetailContent() {
               </div>
             )}
 
-            {/* Info */}
             <div>
               <div className="flex items-start justify-between gap-4">
                 <h1 className="text-3xl font-black text-gray-900">
@@ -238,7 +228,6 @@ function RoomDetailContent() {
               </p>
             </div>
 
-            {/* Amenities */}
             <div>
               <h2 className="font-bold text-gray-900 mb-3">Amenities</h2>
               <div className="flex flex-wrap gap-2">
@@ -254,10 +243,8 @@ function RoomDetailContent() {
             </div>
           </div>
 
-          {/* Right — Booking Panel */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-3xl border border-gray-100 shadow-lg p-6 sticky top-32 space-y-5">
-              {/* Price */}
               <div>
                 <span className="text-3xl font-black text-[#1E293B]">
                   ₹{selectedRoom.price.toLocaleString()}
@@ -265,10 +252,8 @@ function RoomDetailContent() {
                 <span className="text-gray-400 text-sm"> / night</span>
               </div>
 
-              {/* Date picker */}
               <DateRangePicker onDatesValid={handleDatesValid} />
 
-              {/* Guest selector */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Guests
@@ -290,7 +275,6 @@ function RoomDetailContent() {
                 </select>
               </div>
 
-              {/* Availability status */}
               {availabilityLoading && (
                 <div className="flex items-center gap-2 text-sm text-gray-500">
                   <Loader2 className="h-4 w-4 animate-spin text-[#1E293B]" />
@@ -314,7 +298,6 @@ function RoomDetailContent() {
                 </div>
               )}
 
-              {/* Total price */}
               {nights > 0 && (
                 <div className="border-t border-gray-100 pt-4">
                   <div className="flex justify-between text-sm text-gray-600 mb-1">
@@ -332,7 +315,6 @@ function RoomDetailContent() {
                 </div>
               )}
 
-              {/* Book button */}
               <Button
                 variant="primary"
                 className="w-full"
@@ -358,7 +340,6 @@ function RoomDetailContent() {
         </div>
       </div>
 
-      {/* Confirm Modal */}
       <BookingConfirmModal
         isOpen={showModal}
         onClose={() => setShowModal(false)}
